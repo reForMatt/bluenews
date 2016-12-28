@@ -8,7 +8,7 @@ var passport = require('passport'); //for user authentication
 
 //database setup
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/news');
+mongoose.connect(MONGODB_URI);
 require('./models/Posts');
 require('./models/Comments');
 require('./models/Users'); //user authentication
