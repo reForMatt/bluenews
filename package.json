@@ -2,6 +2,9 @@
   "name": "bluenews",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": "7.3.0"
+  },
   "scripts": {
     "start": "node ./bin/www"
   },
@@ -16,7 +19,6 @@
     "jsonwebtoken": "^7.2.1",
     "mongoose": "^4.7.4",
     "morgan": "~1.7.0",
-    "node": "7.3.0",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
     "serve-favicon": "~2.3.0"
