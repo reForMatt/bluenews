@@ -8,7 +8,7 @@ var passport = require('passport'); //for user authentication
 
 //database setup
 var mongoose = require('mongoose');
-mongoose.connect(process.env.MONGOLAB_URI, function (error) {
+mongoose.connect(process.env.MONGOLAB_URI + '/bluenews', function (error) {
     if (error) console.error(error);
     else console.log('mongo connected');
 });

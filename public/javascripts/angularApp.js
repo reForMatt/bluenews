@@ -5,11 +5,11 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         url: '/#/home',
         templateUrl: '/views/home.html',
         controller: 'MainCtrl',
-        //resolve: {
-        //    postPromise: ['posts', function(posts) {
-        //        return posts.getAll();
-        //    }]
-        //}
+        resolve: {
+            postPromise: ['posts', function(posts) {
+                return posts.getAll();
+            }]
+        }
     });
 
     $stateProvider.state('posts', {
