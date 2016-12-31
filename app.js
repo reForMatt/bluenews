@@ -8,7 +8,10 @@ var passport = require('passport'); //for user authentication
 
 //database setup
 var mongoose = require('mongoose');
-mongoose.connect(MONGODB_URI);
+mongoose.connect(process.env.MONGOLAB_URI, function (error) {
+    if (error) console.error(error);
+    else console.log('mongo connected');
+});
 require('./models/Posts');
 require('./models/Comments');
 require('./models/Users'); //user authentication
