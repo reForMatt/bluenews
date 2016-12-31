@@ -2,7 +2,7 @@ var app = angular.module('BlueNews', ['ui.router']);
 
 app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
     $stateProvider.state('home', {
-        url: '/#/home',
+        url: '/home',
         templateUrl: '/views/home.html',
         controller: 'MainCtrl',
         resolve: {
